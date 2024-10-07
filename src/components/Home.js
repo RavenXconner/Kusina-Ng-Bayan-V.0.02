@@ -27,7 +27,7 @@ const Home = () => {
                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div className="dropdown-menu m-0">
                   <a href="#" className="dropdown-item">Booking</a>
-                  <a href="#" className="dropdown-item">Our Team</a>
+                  <Link to="/team" className="dropdown-item">Our Team</Link>
                   <a href="#" className="dropdown-item">Testimonial</a>
                 </div>
               </div>
@@ -124,7 +124,6 @@ const Home = () => {
         <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
         <a className="btn btn-link" href="">About Us</a>
         <a className="btn btn-link" href="">Contact Us</a>
-        <a className="btn btn-link" href="">Reservation</a>
         <a className="btn btn-link" href="">Privacy Policy</a>
         <a className="btn btn-link" href="">Terms & Condition</a>
       </div>
@@ -175,10 +174,9 @@ const Home = () => {
     <div className="copyright">
       <div className="row">
         <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          &copy; <a className="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+          &copy; <a className="border-bottom" href="#">Kusing ng Bayan</a>, All Right Reserved.
           <br />
-          Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br /><br />
-          Distributed By <a className="border-bottom" href="https://themewagon.com" target="_blank" rel="noopener noreferrer">ThemeWagon</a>
+          Designed By <a className="border-bottom" href="#">LunchRoom Bandits BSIT-3R1</a><br /><br />
         </div>
         <div className="col-md-6 text-center text-md-end">
           <div className="footer-menu">

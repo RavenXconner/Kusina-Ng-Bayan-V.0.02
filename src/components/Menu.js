@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import menu1 from "./img/menu-1.jpg"; // Adjust the path as necessary
 import menu2 from "./img/menu-2.jpg"; // Adjust the path as necessary
+import Footer from './footer'; // Adjust the path based on your folder structure
+
 
 const MenuPage = () => {
   return (
@@ -42,9 +44,7 @@ const MenuPage = () => {
                   <a href="booking.html" className="dropdown-item">
                     Booking
                   </a>
-                  <a href="team.html" className="dropdown-item">
-                    Our Team
-                  </a>
+                  <Link to="/team" className="dropdown-item">Our Team</Link>
                   <a href="testimonial.html" className="dropdown-item">
                     Testimonial
                   </a>
@@ -270,83 +270,9 @@ const MenuPage = () => {
         </div>
       </div>
       {/* Menu End */}
-
-      {/* Footer Start */}
-      <div className="container-fluid bg-dark text-light footer mt-5 pt-5">
-        <div className="container">
-          <div className="row g-5">
-            <div className="col-md-4 col-12">
-              <h4 className="text-primary mb-4">Get In Touch</h4>
-              <p className="mb-2">
-                <i className="fa fa-map-marker-alt me-3"></i>123 Street, New
-                York, USA
-              </p>
-              <p className="mb-2">
-                <i className="fa fa-phone-alt me-3"></i>+012 345 67890
-              </p>
-              <p className="mb-2">
-                <i className="fa fa-envelope me-3"></i>info@example.com
-              </p>
-              <div className="d-flex pt-2">
-                <a className="btn btn-outline-light btn-social" href="#">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a className="btn btn-outline-light btn-social" href="#">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a className="btn btn-outline-light btn-social" href="#">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-                <a className="btn btn-outline-light btn-social" href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-            <div className="col-md-4 col-12">
-              <h4 className="text-primary mb-4">Quick Links</h4>
-              <a className="d-block text-light mb-2" href="about.html">
-                About Us
-              </a>
-              <a className="d-block text-light mb-2" href="service.html">
-                Our Services
-              </a>
-              <a className="d-block text-light mb-2" href="menu.html">
-                Our Menu
-              </a>
-              <a className="d-block text-light mb-2" href="contact.html">
-                Contact Us
-              </a>
-            </div>
-            <div className="col-md-4 col-12">
-              <h4 className="text-primary mb-4">Newsletter</h4>
-              <p>Subscribe to our newsletter for the latest updates.</p>
-              <div className="position-relative">
-                <input
-                  className="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <button
-                  type="button"
-                  className="btn btn-primary rounded-pill position-absolute top-0 end-0"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container text-center">
-          <p className="mb-0 py-4">
-            &copy;{" "}
-            <a className="text-light" href="#">
-              Kusina Ng Bayan
-            </a>
-            . All Rights Reserved.
-          </p>
-        </div>
-      </div>
-      {/* Footer End */}
+     {/* Footer Component */}
+     <Footer /> {/* Add Footer component here */}
+      
     </div>
   );
 };
