@@ -114,11 +114,3 @@
     }
 }
 
-@media (max-width: 768px) {
-    .new-title {
-        font-size: 2.5rem;
-    }
-    .py-5 {
-        padding: 2rem 0;
-    }
-}

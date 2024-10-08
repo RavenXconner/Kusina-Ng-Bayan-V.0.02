@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom'; // Add this line
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
+import { Link } from "react-router-dom"; // Add this line
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 import menu1 from "./img/menu-1.jpg"; // Adjust the path as necessary
 import menu2 from "./img/menu-2.jpg"; // Adjust the path as necessary
-import Footer from './footer'; // Adjust the path based on your folder structure
-
+import Footer from "./footer"; // Adjust the path based on your folder structure
 
 const MenuPage = () => {
   return (
@@ -28,26 +27,39 @@ const MenuPage = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0 pe-4">
-            <Link to="/" className="nav-item nav-link active">Home</Link>
-              <Link to="/about" className="nav-item nav-link">About</Link>
-              <Link to="/menu" className="nav-item nav-link">Menu</Link>
-              
+              <Link to="/" className="nav-item nav-link active">
+                Home
+              </Link>
+              <Link to="/about" className="nav-item nav-link">
+                About
+              </Link>
+              <Link to="/menu" className="nav-item nav-link">
+                Menu
+              </Link>
+
               <div className="nav-item dropdown">
                 <a
                   href="#"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
-                  Pages
+                  More
                 </a>
                 <div className="dropdown-menu m-0">
-                  <Link to="/maintenance" className="dropdown-item">in progress</Link>
-                  <Link to="/team" className="dropdown-item">Our Team</Link>
-                  <Link to="/maintenance" className="dropdown-item">in progress</Link>
-                  
+                  <Link to="/maintenance" className="dropdown-item">
+                    Profile
+                  </Link>
+                  <Link to="/team" className="dropdown-item">
+                    Our Team
+                  </Link>
+                  <Link to="/maintenance" className="dropdown-item">
+                    in progress
+                  </Link>
                 </div>
               </div>
-              <Link to="/contact" className="nav-item nav-link">Contact</Link>
+              <Link to="/contact" className="nav-item nav-link">
+                Contact
+              </Link>
             </div>
             <a href="#" className="btn btn-primary py-2 px-4">
               Sign up
@@ -63,7 +75,7 @@ const MenuPage = () => {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb justify-content-center text-uppercase">
                 <li className="breadcrumb-item">
-                <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
 
                 <li
@@ -78,7 +90,6 @@ const MenuPage = () => {
         </div>
       </div>
       {/* Navbar & Hero End */}
-
       {/* Menu Start */}
       <div className="container-xxl py-5">
         <div className="container">
@@ -265,9 +276,8 @@ const MenuPage = () => {
         </div>
       </div>
       {/* Menu End */}
-     {/* Footer Component */}
-     <Footer /> {/* Add Footer component here */}
-      
+      {/* Footer Component */}
+      <Footer /> {/* Add Footer component here */}
     </div>
   );
 };

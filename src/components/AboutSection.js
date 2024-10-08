@@ -40,11 +40,11 @@ const Home = () => {
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
-                  Pages
+                  More
                 </Link>
                 <div className="dropdown-menu m-0">
                   <Link to="/maintenance" className="dropdown-item">
-                    In Progress
+                    Profile
                   </Link>
                   <Link to="/team" className="dropdown-item">
                     Our Team

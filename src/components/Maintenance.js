@@ -1,10 +1,10 @@
 // src/UnderMaintenance.js
 
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './css/Maintenance.css'; // Update the CSS import to match the new filename
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesome
-import { faTimes } from '@fortawesome/free-solid-svg-icons'; // Import the X icon
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import "./css/Maintenance.css"; // Update the CSS import to match the new filename
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
+import { faTimes } from "@fortawesome/free-solid-svg-icons"; // Import the X icon
 
 const UnderMaintenance = () => {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -19,7 +19,9 @@ const UnderMaintenance = () => {
         <FontAwesomeIcon icon={faTimes} size="2x" />
       </button>
       <h1 className="maintenance-title">Under Maintenance</h1>
-      <p className="maintenance-message">We're currently performing maintenance. Please check back later.</p>
+      <p className="maintenance-message">
+        We're currently performing maintenance. Please check back later.
+      </p>
     </div>
   );
 };

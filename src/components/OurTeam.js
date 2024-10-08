@@ -84,7 +84,7 @@ const TeamPage = () => {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb justify-content-center text-uppercase">
               <li className="breadcrumb-item">
-              <Link to="/">Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li
                 className="breadcrumb-item text-white active"
@@ -121,7 +121,7 @@ const TeamPage = () => {
                     alt="Team Member 1"
                   />
                 </div>
-                <h5 className="mb-0">Javy Malisud Rodillon</h5>
+                <h5 className="mb-0">JAVY MALISUD RODILLON</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
@@ -149,7 +149,7 @@ const TeamPage = () => {
                     alt="Team Member 2"
                   />
                 </div>
-                <h5 className="mb-0">ABBA JOY TAUTO-AN</h5>
+                <h5 className="mb-0">ARIEL JAY LYSTER VILLARTA</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
@@ -317,7 +317,7 @@ const TeamPage = () => {
                     alt="Team Member 1"
                   />
                 </div>
-                <h5 className="mb-0">Ariel Jay Lyster Villarta</h5>
+                <h5 className="mb-0">ABBA JOY TAUTO-AN</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">

@@ -54,9 +54,3 @@
 .new-back-to-top:hover {
     background-color: #e0a800;
 }
-
-@media (max-width: 768px) {
-    .new-title {
-        font-size: 2.5rem;
-    }
-}

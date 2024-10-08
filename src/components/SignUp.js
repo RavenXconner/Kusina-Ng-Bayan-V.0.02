@@ -1,9 +1,9 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/Signup.css'; // Custom styles
-import { Link } from 'react-router-dom';
-import Navbar from './Navbar'; // Import the Navbar component
-import Footer from './footer';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/Signup.css"; // Custom styles
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar"; // Import the Navbar component
+import Footer from "./footer";
 
 const SignupPage = () => {
   return (
@@ -15,7 +15,9 @@ const SignupPage = () => {
       <div className="new-container py-5 d-flex justify-content-center align-items-center">
         <div className="new-container text-center">
           <div className="new-text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">Join Us</h5>
+            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">
+              Join Us
+            </h5>
             <h1 className="new-title">Create Your Account</h1>
           </div>
           <div className="new-row justify-content-center">
@@ -56,7 +58,9 @@ const SignupPage = () => {
                       />
                     </div>
                     <div className="new-col-12">
-                      <button className="new-btn w-100 py-3" type="submit">Sign Up</button>
+                      <button className="new-btn w-100 py-3" type="submit">
+                        Sign Up
+                      </button>
                     </div>
                     <div className="new-col-12">
                       <p className="mt-3">
@@ -69,7 +73,10 @@ const SignupPage = () => {
                       </p>
                     </div>
                     <div className="new-col-12">
-                      <button className="new-btn-guest w-100 py-3" type="button">
+                      <button
+                        className="new-btn-guest w-100 py-3"
+                        type="button"
+                      >
                         Continue as Guest
                       </button>
                     </div>
