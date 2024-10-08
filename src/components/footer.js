@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -70,7 +71,8 @@ const Footer = () => {
             </div>
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
-                <a href="#">Home</a>
+              <Link to="/" className="nav-item nav-link active">Home</Link>
+                <Link to="./">Home</Link>
                 <a href="#">Cookies</a>
                 <a href="#">Help</a>
                 <a href="#">FAQs</a>

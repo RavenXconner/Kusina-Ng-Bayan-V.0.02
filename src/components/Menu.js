@@ -41,9 +41,9 @@ const MenuPage = () => {
                   Pages
                 </a>
                 <div className="dropdown-menu m-0">
-                  <Link to="/booking" className="dropdown-item">in progress</Link>
+                  <Link to="/maintenance" className="dropdown-item">in progress</Link>
                   <Link to="/team" className="dropdown-item">Our Team</Link>
-                  <Link to="/testimonial" className="dropdown-item">in progress</Link>
+                  <Link to="/maintenance" className="dropdown-item">in progress</Link>
                   
                 </div>
               </div>
@@ -63,7 +63,7 @@ const MenuPage = () => {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb justify-content-center text-uppercase">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                <Link to="/">Home</Link>
                 </li>
 
                 <li

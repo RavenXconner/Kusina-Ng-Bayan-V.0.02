@@ -1,0 +1,36 @@
+/* src/UnderMaintenance.css */
+
+.under-maintenance-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f8f9fa; /* Light background */
+    color: #343a40; /* Dark text color */
+    text-align: center;
+    position: relative; /* To position the close button */
+  }
+  
+  .maintenance-title {
+    font-size: 3rem; /* Large heading */
+  }
+  
+  .maintenance-message {
+    font-size: 1.5rem; /* Medium text */
+  }
+  
+  .close-button {
+    position: absolute; /* Position the button at the top-right corner */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #343a40; /* Dark text color */
+  }
+  
+  .close-button:focus {
+    outline: none; /* Remove outline when focused */
+  }
+  

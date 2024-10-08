@@ -1,58 +1,95 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure you include Bootstrap
-import './css/signup.css'; // Import your custom CSS file
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/Signup.css'; // Custom styles
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar'; // Import the Navbar component
-import Footer from './footer'; // Import the Footer component
+import Footer from './footer';
 
-const SignUp = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
-
-  const handleBack = () => {
-    navigate(-1); // Go back to the previous page
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Add your sign-up logic here
-  };
-
+const SignupPage = () => {
   return (
-    <>
-      <Navbar /> {/* Include the Navbar */}
-      <div className="container">
-        <div className="signup-box">
-          <div className="back-button">
-            <button type="button" className="btn btn-secondary" onClick={handleBack}>Back</button>
+    <div className="new-container bg-white p-0">
+      {/* Navbar Component */}
+      <Navbar />
+
+      {/* Signup Form Section */}
+      <div className="new-container py-5 d-flex justify-content-center align-items-center">
+        <div className="new-container text-center">
+          <div className="new-text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">Join Us</h5>
+            <h1 className="new-title">Create Your Account</h1>
           </div>
-          <h1 className="title">Create an Account</h1>
-          <p className="subtitle">Join us and enjoy delicious meals!</p>
-          <form onSubmit={handleSubmit}>
-            <div className="input-group">
-              <label htmlFor="username">Username</label>
-              <input type="text" id="username" name="username" required />
+          <div className="new-row justify-content-center">
+            <div className="new-col-md-6">
+              <div className="wow fadeInUp" data-wow-delay="0.2s">
+                <form>
+                  <div className="new-row">
+                    <div className="new-col-6">
+                      <input
+                        type="text"
+                        className="new-input w-100"
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                    <div className="new-col-6">
+                      <input
+                        type="text"
+                        className="new-input w-100"
+                        placeholder="Last Name"
+                        required
+                      />
+                    </div>
+                    <div className="new-col-12">
+                      <input
+                        type="email"
+                        className="new-input w-100"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                    <div className="new-col-12">
+                      <input
+                        type="password"
+                        className="new-input w-100"
+                        placeholder="Password"
+                        required
+                      />
+                    </div>
+                    <div className="new-col-12">
+                      <button className="new-btn w-100 py-3" type="submit">Sign Up</button>
+                    </div>
+                    <div className="new-col-12">
+                      <p className="mt-3">
+                        Already have an account? <Link to="/login">Login</Link>
+                      </p>
+                    </div>
+                    <div className="new-col-12">
+                      <p className="mt-3">
+                        <Link to="/forgot-password">Forgot Password?</Link>
+                      </p>
+                    </div>
+                    <div className="new-col-12">
+                      <button className="new-btn-guest w-100 py-3" type="button">
+                        Continue as Guest
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div className="input-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div className="input-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" id="password" name="password" required />
-            </div>
-            <div className="input-group">
-              <label htmlFor="confirm-password">Confirm Password</label>
-              <input type="password" id="confirm-password" name="confirm-password" required />
-            </div>
-            <button type="submit" className="btn btn-primary">Sign Up</button>
-            <button type="button" className="btn btn-outline-secondary guest-btn">Continue as Guest</button>
-          </form>
-          <p className="login-link">Already have an account? <a href="/login">Log in here</a></p>
+          </div>
         </div>
       </div>
-      <Footer /> {/* Include the Footer */}
-    </>
+
+      {/* Back to Top */}
+      <a href="#" className="new-back-to-top btn-lg btn-primary btn-lg-square">
+        <i className="bi bi-arrow-up"></i>
+      </a>
+
+      {/* Footer Component */}
+      <Footer />
+    </div>
   );
 };
 
-export default SignUp;
+export default SignupPage;
