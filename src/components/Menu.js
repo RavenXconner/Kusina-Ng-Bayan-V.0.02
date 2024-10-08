@@ -41,18 +41,13 @@ const MenuPage = () => {
                   Pages
                 </a>
                 <div className="dropdown-menu m-0">
-                  <a href="booking.html" className="dropdown-item">
-                    Booking
-                  </a>
+                  <Link to="/booking" className="dropdown-item">in progress</Link>
                   <Link to="/team" className="dropdown-item">Our Team</Link>
-                  <a href="testimonial.html" className="dropdown-item">
-                    Testimonial
-                  </a>
+                  <Link to="/testimonial" className="dropdown-item">in progress</Link>
+                  
                 </div>
               </div>
-              <a href="contact.html" className="nav-item nav-link">
-                Contact
-              </a>
+              <Link to="/contact" className="nav-item nav-link">Contact</Link>
             </div>
             <a href="#" className="btn btn-primary py-2 px-4">
               Sign up
@@ -106,8 +101,8 @@ const MenuPage = () => {
                 >
                   <i className="fa fa-coffee fa-2x text-primary"></i>
                   <div className="ps-3">
-                    <small className="text-body">Popular</small>
-                    <h6 className="mt-n1 mb-0">Breakfast</h6>
+                    <small className="text-body">Kusina</small>
+                    <h6 className="mt-n1 mb-0">Luzon</h6>
                   </div>
                 </a>
               </li>
@@ -119,8 +114,8 @@ const MenuPage = () => {
                 >
                   <i className="fa fa-hamburger fa-2x text-primary"></i>
                   <div className="ps-3">
-                    <small className="text-body">Special</small>
-                    <h6 className="mt-n1 mb-0">Lunch</h6>
+                    <small className="text-body">Kusina</small>
+                    <h6 className="mt-n1 mb-0">Visayas</h6>
                   </div>
                 </a>
               </li>
@@ -132,8 +127,8 @@ const MenuPage = () => {
                 >
                   <i className="fa fa-utensils fa-2x text-primary"></i>
                   <div className="ps-3">
-                    <small className="text-body">Lovely</small>
-                    <h6 className="mt-n1 mb-0">Dinner</h6>
+                    <small className="text-body">Kusina</small>
+                    <h6 className="mt-n1 mb-0">Mindanao</h6>
                   </div>
                 </a>
               </li>

@@ -2,10 +2,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Add this line
 import Footer from './footer'; // Adjust the path as necessary
-import teamMember1 from './img/Profiles//323878374_390432236639156_3011448574571720372_n.jpg';
-import teamMember2 from './img/Profiles/IMG_0606-removebg-preview.png';
-import teamMember3 from './img/Profiles/p1.JPG';
-import teamMember4 from './img/Profiles/Patac-removebg-preview.png';
+import teamMember1 from './img/Profiles/devpic.jpg';
+import teamMember2 from './img/Profiles/devpic.jpg';
+import teamMember3 from './img/Profiles/devpic.jpg';
+import teamMember4 from './img/Profiles/devpic.jpg';
+import teamMember5 from './img/Profiles/devpic.jpg';
+import teamMember6 from './img/Profiles/devpic.jpg';
+import teamMember7 from './img/Profiles/devpic.jpg';
+import teamMember8 from './img/Profiles/devpic.jpg';
+
 // Import additional team members as needed
 
 const TeamPage = () => {
@@ -35,12 +40,12 @@ const TeamPage = () => {
               <div className="nav-item dropdown">
                 <a href="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                 <div className="dropdown-menu m-0">
-                  <a href="booking.html" className="dropdown-item">Booking</a>
-                  <a href="team.html" className="dropdown-item active">Our Team</a>
-                  <a href="testimonial.html" className="dropdown-item">Testimonial</a>
+                  <Link to="/booking" className="dropdown-item">in progress</Link>
+                  <Link to="/team" className="dropdown-item">Our Team</Link>
+                  <Link to="/testimonial" className="dropdown-item">in progress</Link>
                 </div>
               </div>
-              <a href="contact.html" className="nav-item nav-link">Contact</a>
+              <Link to="/contact" className="nav-item nav-link">Contact</Link>
             </div>
             <a href="" className="btn btn-primary py-2 px-4">Sign up</a>
           </div>
@@ -76,7 +81,7 @@ const TeamPage = () => {
                 <div className="rounded-circle overflow-hidden m-4">
                   <img className="img-fluid" src={teamMember1} alt="Team Member 1" />
                 </div>
-                <h5 className="mb-0">Full Name</h5>
+                <h5 className="mb-0">Javy Malisud Rodillon</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
@@ -91,7 +96,7 @@ const TeamPage = () => {
                 <div className="rounded-circle overflow-hidden m-4">
                   <img className="img-fluid" src={teamMember2} alt="Team Member 2" />
                 </div>
-                <h5 className="mb-0">Full Name</h5>
+                <h5 className="mb-0">ABBA JOY TAUTO-AN</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
@@ -106,7 +111,7 @@ const TeamPage = () => {
                 <div className="rounded-circle overflow-hidden m-4">
                   <img className="img-fluid" src={teamMember3} alt="Team Member 3" />
                 </div>
-                <h5 className="mb-0">Full Name</h5>
+                <h5 className="mb-0">JAMAICA PATAC</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
@@ -121,7 +126,67 @@ const TeamPage = () => {
                 <div className="rounded-circle overflow-hidden m-4">
                   <img className="img-fluid" src={teamMember4} alt="Team Member 4" />
                 </div>
-                <h5 className="mb-0">Full Name</h5>
+                <h5 className="mb-0">JEASON NEIL PAIGNA</h5>
+                <small>Designation</small>
+                <div className="d-flex justify-content-center mt-3">
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-twitter"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            {/* Team Member 5 */}
+            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="team-item text-center rounded overflow-hidden">
+                <div className="rounded-circle overflow-hidden m-4">
+                  <img className="img-fluid" src={teamMember5} alt="Team Member 1" />
+                </div>
+                <h5 className="mb-0">SHUN CYREL CASERES</h5>
+                <small>Designation</small>
+                <div className="d-flex justify-content-center mt-3">
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-twitter"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            {/* Team Member 6 */}
+            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="team-item text-center rounded overflow-hidden">
+                <div className="rounded-circle overflow-hidden m-4">
+                  <img className="img-fluid" src={teamMember6} alt="Team Member 1" />
+                </div>
+                <h5 className="mb-0">CHRISTINE SEVILLA</h5>
+                <small>Designation</small>
+                <div className="d-flex justify-content-center mt-3">
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-twitter"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            {/* Team Member 7 */}
+            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="team-item text-center rounded overflow-hidden">
+                <div className="rounded-circle overflow-hidden m-4">
+                  <img className="img-fluid" src={teamMember7} alt="Team Member 1" />
+                </div>
+                <h5 className="mb-0">FAITH GRACE GUTIERREZ</h5>
+                <small>Designation</small>
+                <div className="d-flex justify-content-center mt-3">
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-twitter"></i></a>
+                  <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            {/* Team Member 8 */}
+            <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="team-item text-center rounded overflow-hidden">
+                <div className="rounded-circle overflow-hidden m-4">
+                  <img className="img-fluid" src={teamMember8} alt="Team Member 1" />
+                </div>
+                <h5 className="mb-0">Ariel Jay Lyster Villarta</h5>
                 <small>Designation</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>

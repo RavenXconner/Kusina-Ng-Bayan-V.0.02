@@ -1,11 +1,68 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/Contact.css'; // Custom styles
+import { Link } from 'react-router-dom';
+import Navbar from './Navbar'; // Import the Navbar component
+import Footer from './footer';
 
-function Contact() {
-    return (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <h1>This page is under maintenance</h1>
+const ContactPage = () => {
+  return (
+    <div className="new-container bg-white p-0">
+      {/* Navbar Component */}
+      <Navbar />
+
+      {/* Contact Form Section */}
+      <div className="new-container py-5 d-flex justify-content-center align-items-center">
+        <div className="new-container text-center">
+          <div className="new-text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">Get In Touch</h5>
+            <h1 className="new-title">Contact For Any Query</h1>
+          </div>
+          <div className="new-row justify-content-center">
+            <div className="new-col-md-6">
+              <div className="wow fadeInUp" data-wow-delay="0.2s">
+                <h5 className="new-info-title">Contact Info</h5>
+                <p><i className="fa fa-map-marker-alt me-3"></i>123 Street, City, Country</p>
+                <p><i className="fa fa-phone-alt me-3"></i>+012 345 6789</p>
+                <p><i className="fa fa-envelope me-3"></i>info@example.com</p>
+              </div>
+            </div>
+            <div className="new-col-md-6">
+              <div className="wow fadeInUp" data-wow-delay="0.3s">
+                <form>
+                  <div className="new-row">
+                    <div className="new-col-12">
+                      <input type="text" className="new-input w-100" placeholder="Your Name" required />
+                    </div>
+                    <div className="new-col-12">
+                      <input type="email" className="new-input w-100" placeholder="Your Email" required />
+                    </div>
+                    <div className="new-col-12">
+                      <input type="text" className="new-input w-100" placeholder="Subject" required />
+                    </div>
+                    <div className="new-col-12">
+                      <textarea className="new-textarea w-100" rows="4" placeholder="Message" required></textarea>
+                    </div>
+                    <div className="new-col-12">
+                      <button className="new-btn w-100 py-3" type="submit">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-    );
-}
+      </div>
 
-export default Contact;
+      {/* Back to Top */}
+      <a href="#" className="new-back-to-top btn-lg btn-primary btn-lg-square">
+        <i className="bi bi-arrow-up"></i>
+      </a>
+
+      {/* Footer Component */}
+      <Footer />
+    </div>
+  );
+};
+
+export default ContactPage;

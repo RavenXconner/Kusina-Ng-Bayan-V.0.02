@@ -27,9 +27,9 @@ const Home = () => {
               <div className="nav-item dropdown">
                 <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</Link>
                 <div className="dropdown-menu m-0">
-                  <Link to="/booking" className="dropdown-item">Booking</Link>
+                  <Link to="/booking" className="dropdown-item">in progress</Link>
                   <Link to="/team" className="dropdown-item">Our Team</Link>
-                  <Link to="/testimonial" className="dropdown-item">Testimonial</Link>
+                  <Link to="/testimonial" className="dropdown-item">in progress</Link>
                 </div>
               </div>
               <Link to="/contact" className="nav-item nav-link">Contact</Link>

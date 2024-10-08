@@ -26,12 +26,13 @@ const Home = () => {
               <div className="nav-item dropdown">
                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div className="dropdown-menu m-0">
-                  <a href="#" className="dropdown-item">Booking</a>
+                <Link to="/booking" className="dropdown-item">in progress</Link>
                   <Link to="/team" className="dropdown-item">Our Team</Link>
-                  <a href="#" className="dropdown-item">Testimonial</a>
+                  <Link to="/testimonial" className="dropdown-item">in progress</Link>
                 </div>
               </div>
-              <a href="#" className="nav-item nav-link">Contact</a>
+              <Link to="/contact" className="nav-item nav-link">Contact</Link>
+
             </div>
             <Link to="/signup" className="btn btn-primary py-2 px-4">Sign up</Link> {/* Use Link component */}
           </div>

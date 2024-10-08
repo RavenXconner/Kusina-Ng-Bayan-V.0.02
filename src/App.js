@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/AboutSection';
 import MenuPage from './components/Menu'; // Adjust the path accordingly
 import TeamPage from './components/OurTeam';
+import ContactPage from './components/Contact'; // Import ContactPage component
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>
