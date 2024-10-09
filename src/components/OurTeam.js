@@ -2,15 +2,15 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Add this line
 import Footer from "./footer"; // Adjust the path as necessary
-import teamMember1 from "./img/Profiles/devpic.jpg";
-import teamMember2 from "./img/Profiles/devpic.jpg";
-import teamMember3 from "./img/Profiles/devpic.jpg";
+import teamMember1 from "./img/Profiles/Javy-Rodillon.png";
+import teamMember2 from "./img/Profiles/Villarta.png";
+import teamMember3 from "./img/Profiles/JAMAICA PATAC.png";
 import teamMember4 from "./img/Profiles/devpic.jpg";
-import teamMember5 from "./img/Profiles/devpic.jpg";
+import teamMember5 from "./img/Profiles/SHUN CYREL CASERES.png";
 import teamMember6 from "./img/Profiles/devpic.jpg";
-import teamMember7 from "./img/Profiles/devpic.jpg";
-import teamMember8 from "./img/Profiles/devpic.jpg";
-
+import teamMember7 from "./img/Profiles/Gutierrez_Faith.png";
+import teamMember8 from "./img/Profiles/ABBA JOY TABACON TAUTO-AN.png";
+import teamMember9 from "./img/Profiles/devpic.jpg";
 // Import additional team members as needed
 
 const TeamPage = () => {
@@ -314,6 +314,34 @@ const TeamPage = () => {
                   <img
                     className="img-fluid"
                     src={teamMember8}
+                    alt="Team Member 1"
+                  />
+                </div>
+                <h5 className="mb-0">JAYRILLE TUBERA</h5>
+                <small>Designation</small>
+                <div className="d-flex justify-content-center mt-3">
+                  <a className="btn btn-square btn-primary mx-1" href="#">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a className="btn btn-square btn-primary mx-1" href="#">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a className="btn btn-square btn-primary mx-1" href="#">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Team Member 9 */}
+            <div
+              className="col-lg-3 col-md-6 wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div className="team-item text-center rounded overflow-hidden">
+                <div className="rounded-circle overflow-hidden m-4">
+                  <img
+                    className="img-fluid"
+                    src={teamMember9}
                     alt="Team Member 1"
                   />
                 </div>
