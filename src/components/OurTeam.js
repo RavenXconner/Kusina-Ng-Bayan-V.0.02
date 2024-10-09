@@ -2,14 +2,14 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Add this line
 import Footer from "./footer"; // Adjust the path as necessary
-import teamMember1 from "./img/Profiles/Javy-Rodillon.png";
-import teamMember2 from "./img/Profiles/Villarta.png";
+import teamMember1 from "./img/Profiles/Villarta.png";
+import teamMember2 from "./img/Profiles/Javy-Rodillon.png";
 import teamMember3 from "./img/Profiles/JAMAICA PATAC.png";
-import teamMember4 from "./img/Profiles/devpic.jpg";
-import teamMember5 from "./img/Profiles/SHUN CYREL CASERES.png";
-import teamMember6 from "./img/Profiles/devpic.jpg";
-import teamMember7 from "./img/Profiles/Gutierrez_Faith.png";
-import teamMember8 from "./img/Profiles/ABBA JOY TABACON TAUTO-AN.png";
+import teamMember4 from "./img/Profiles/Jeason_neil_Paigna-removebg-preview.png";
+import teamMember5 from "./img/Profiles/Caseres__Shun_Cyrel_-removebg-preview.png";
+import teamMember6 from "./img/Profiles/CHRISTINE_SEVILLA.png";
+import teamMember7 from "./img/Profiles//Gutierrez_Faith-removebg-preview.png";
+import teamMember8 from "./img/Profiles/JAYRILLE TUBERA.png";
 import teamMember9 from "./img/Profiles/devpic.jpg";
 // Import additional team members as needed
 
@@ -121,8 +121,8 @@ const TeamPage = () => {
                     alt="Team Member 1"
                   />
                 </div>
-                <h5 className="mb-0">JAVY MALISUD RODILLON</h5>
-                <small>Designation</small>
+                <h5 className="mb-0">ARIEL JAY LYSTER VILLARTA</h5>
+                <small>PROJECT MANAGER</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -149,8 +149,8 @@ const TeamPage = () => {
                     alt="Team Member 2"
                   />
                 </div>
-                <h5 className="mb-0">ARIEL JAY LYSTER VILLARTA</h5>
-                <small>Designation</small>
+                <h5 className="mb-0">JAVY MALISUD RODILLON</h5>
+                <small>FULL-STACK DEV</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -178,7 +178,7 @@ const TeamPage = () => {
                   />
                 </div>
                 <h5 className="mb-0">JAMAICA PATAC</h5>
-                <small>Designation</small>
+                <small>FRONTEND DEV</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -195,18 +195,18 @@ const TeamPage = () => {
             {/* Team Member 4 */}
             <div
               className="col-lg-3 col-md-6 wow fadeInUp"
-              data-wow-delay="0.7s"
+              data-wow-delay="0.1s"
             >
               <div className="team-item text-center rounded overflow-hidden">
                 <div className="rounded-circle overflow-hidden m-4">
                   <img
                     className="img-fluid"
                     src={teamMember4}
-                    alt="Team Member 4"
+                    alt="Team Member 1"
                   />
                 </div>
                 <h5 className="mb-0">JEASON NEIL PAIGNA</h5>
-                <small>Designation</small>
+                <small>FRONTEND DEV</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -234,7 +234,7 @@ const TeamPage = () => {
                   />
                 </div>
                 <h5 className="mb-0">SHUN CYREL CASERES</h5>
-                <small>Designation</small>
+                <small>FRONTEND DEV</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -262,7 +262,7 @@ const TeamPage = () => {
                   />
                 </div>
                 <h5 className="mb-0">CHRISTINE SEVILLA</h5>
-                <small>Designation</small>
+                <small>UI/UX</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -290,7 +290,7 @@ const TeamPage = () => {
                   />
                 </div>
                 <h5 className="mb-0">FAITH GRACE GUTIERREZ</h5>
-                <small>Designation</small>
+                <small>UI/UX</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -318,7 +318,7 @@ const TeamPage = () => {
                   />
                 </div>
                 <h5 className="mb-0">JAYRILLE TUBERA</h5>
-                <small>Designation</small>
+                <small>UI/UX</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
@@ -346,7 +346,7 @@ const TeamPage = () => {
                   />
                 </div>
                 <h5 className="mb-0">ABBA JOY TAUTO-AN</h5>
-                <small>Designation</small>
+                <small>SCRUM MASTER</small>
                 <div className="d-flex justify-content-center mt-3">
                   <a className="btn btn-square btn-primary mx-1" href="#">
                     <i className="fab fa-facebook-f"></i>
