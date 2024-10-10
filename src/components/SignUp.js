@@ -1,106 +1,118 @@
-import React from "react";
+import React, { useState } from "react";
+import { supabase } from "../supabaseClient"; // Import the Supabase client
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Signup.css"; // Custom styles
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar"; // Import the Navbar component
-import Footer from "./footer";
+import Footer from "./FooterPage";
 
 const SignupPage = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    setErrorMessage(null);
+
+    const { email, password } = formData;
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+
+    if (error) {
+      setErrorMessage(error.message);
+    } else {
+      setSuccessMessage("Account created successfully. Please check your email.");
+    }
+  };
+
   return (
     <div className="new-container bg-white p-0">
-      {/* Navbar Component */}
       <Navbar />
-
-      {/* Signup Form Section */}
       <div className="new-container py-5 d-flex justify-content-center align-items-center">
         <div className="new-container text-center">
-          <div className="new-text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">
-              Join Us
-            </h5>
+          <div className="new-text-center">
+            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">Join Us</h5>
             <h1 className="new-title">Create Your Account</h1>
           </div>
           <div className="new-row justify-content-center">
             <div className="new-col-md-6">
-              <div className="wow fadeInUp" data-wow-delay="0.2s">
-                <form>
-                  <div className="new-row">
-                    <div className="new-col-6">
-                      <input
-                        type="text"
-                        className="new-input w-100"
-                        placeholder="First Name"
-                        required
-                      />
-                    </div>
-                    <div className="new-col-6">
-                      <input
-                        type="text"
-                        className="new-input w-100"
-                        placeholder="Last Name"
-                        required
-                      />
-                    </div>
-                    <div className="new-col-12">
-                      <input
-                        type="email"
-                        className="new-input w-100"
-                        placeholder="Your Email"
-                        required
-                      />
-                    </div>
-                    <div className="new-col-12">
-                      <input
-                        type="password"
-                        className="new-input w-100"
-                        placeholder="Password"
-                        required
-                      />
-                    </div>
-                    <div className="new-col-12">
-                      <button className="new-btn w-100 py-3" type="submit">
-                        Sign Up
-                      </button>
-                    </div>
-                    <div className="new-col-12">
-                      <p className="mt-3">
-                        Already have an account? <Link to="/login">Login</Link>
-                      </p>
-                    </div>
-                    <div className="new-col-12">
-                      <p className="mt-3">
-                        <Link to="/forgot-password">Forgot Password?</Link>
-                      </p>
-                    </div>
-                    <div className="new-col-12">
-                      <button
-                        className="new-btn-guest w-100 py-3"
-                        type="button"
-                      >
-                        Continue as Guest
-                      </button>
-                    </div>
+              <form onSubmit={handleSignUp}>
+                <div className="new-row">
+                  <div className="new-col-6">
+                    <input
+                      type="text"
+                      className="new-input w-100"
+                      placeholder="First Name"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
-                </form>
-              </div>
+                  <div className="new-col-6">
+                    <input
+                      type="text"
+                      className="new-input w-100"
+                      placeholder="Last Name"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="new-col-12">
+                    <input
+                      type="email"
+                      className="new-input w-100"
+                      placeholder="Your Email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="new-col-12">
+                    <input
+                      type="password"
+                      className="new-input w-100"
+                      placeholder="Password"
+                      name="password"
+                      value={formData.password}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="new-col-12">
+                    <button className="new-btn w-100 py-3" type="submit">Sign Up</button>
+                  </div>
+                  {errorMessage && <div className="new-col-12"><p className="text-danger">{errorMessage}</p></div>}
+                  {successMessage && <div className="new-col-12"><p className="text-success">{successMessage}</p></div>}
+                  <div className="new-col-12">
+                    <p className="mt-3">Already have an account? <Link to="/login">Login</Link></p>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Back to Top */}
-      <Link
-        to="#"
-        className="new-back-to-top btn-lg btn-primary btn-lg-square"
-        onClick={(e) => {
-          e.preventDefault(); // Prevent default anchor behavior
-          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
-        }}
-      >
-        <i className="bi bi-arrow-up"></i>
-      </Link>
-
-      {/* Footer Component */}
       <Footer />
     </div>
   );

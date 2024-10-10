@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import menu1 from "./img/menu-1.jpg"; // Adjust the path as necessary
 import menu2 from "./img/menu-2.jpg"; // Adjust the path as necessary
-import Footer from "./footer"; // Adjust the path based on your folder structure
+import Footer from "./FooterPage"; // Adjust the path based on your folder structure
 
 const MenuPage = () => {
   return (

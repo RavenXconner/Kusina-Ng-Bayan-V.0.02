@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom"; // Add Link from react-router-dom
-import Footer from "./footer"; // Adjust the path based on your folder structure
+import Footer from "./FooterPage"; // Adjust the path based on your folder structure
 
 const Home = () => {
   return (

@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Contact.css"; // Custom styles
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Navbar from "./Navbar"; // Import the Navbar component
-import Footer from "./footer"; // Import the Footer component
+import Footer from "./FooterPage"; // Import the Footer component
 
 const ContactPage = () => {
   return (
