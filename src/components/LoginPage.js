@@ -1,7 +1,8 @@
+// src/components/Login.js
 import React, { useState } from "react";
-import { supabase } from "../supabaseClient";
+import { auth } from "./firebaseConfig"; // Adjust path if necessary
+import { signInWithEmailAndPassword } from "firebase/auth";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/Login.css"; 
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar"; 
 import Footer from "./FooterPage";
@@ -26,21 +27,17 @@ const LoginPage = () => {
     setErrorMessage(null);
     setLoading(true); // Set loading to true
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    setLoading(false); // Set loading to false after response
-
-    if (error) {
-      setErrorMessage(error.message);
-    } else {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
       setShowSuccessModal(true); // Show success modal
       setTimeout(() => {
         setShowSuccessModal(false);
         navigate("/"); // Navigate to the home page after delay
       }, 2000); // 2 seconds delay before navigating
+    } catch (error) {
+      setErrorMessage(error.message);
+    } finally {
+      setLoading(false); // Set loading to false after response
     }
   };
 

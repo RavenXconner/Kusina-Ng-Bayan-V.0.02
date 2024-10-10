@@ -1,44 +1,30 @@
-import React, { useState } from "react";
-import { supabase } from "../supabaseClient"; // Import the Supabase client
+// src/components/SignUp.js
+import React, { useState } from 'react';
+import { auth } from './firebaseConfig'; // Adjust path if necessary
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/Signup.css"; // Custom styles
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar"; // Import the Navbar component
+import Navbar from "./Navbar";
 import Footer from "./FooterPage";
 
 const SignupPage = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
-  const [errorMessage, setErrorMessage] = useState(null);
-  const [successMessage, setSuccessMessage] = useState(null);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSignUp = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    setErrorMessage(null);
+    setError(''); // Clear any previous errors
+    setSuccessMessage(''); // Clear any previous success messages
 
-    const { email, password } = formData;
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    });
-
-    if (error) {
-      setErrorMessage(error.message);
-    } else {
-      setSuccessMessage("Account created successfully. Please check your email.");
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      setSuccessMessage("Account created successfully! You can now log in.");
+      setEmail(''); // Clear email input after successful signup
+      setPassword(''); // Clear password input after successful signup
+    } catch (error) {
+      setError(error.message); // Set error message if sign-up fails
     }
   };
 
@@ -47,70 +33,33 @@ const SignupPage = () => {
       <Navbar />
       <div className="new-container py-5 d-flex justify-content-center align-items-center">
         <div className="new-container text-center">
-          <div className="new-text-center">
-            <h5 className="new-section-title ff-secondary new-text-primary fw-normal">Join Us</h5>
-            <h1 className="new-title">Create Your Account</h1>
-          </div>
-          <div className="new-row justify-content-center">
-            <div className="new-col-md-6">
-              <form onSubmit={handleSignUp}>
-                <div className="new-row">
-                  <div className="new-col-6">
-                    <input
-                      type="text"
-                      className="new-input w-100"
-                      placeholder="First Name"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="new-col-6">
-                    <input
-                      type="text"
-                      className="new-input w-100"
-                      placeholder="Last Name"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="new-col-12">
-                    <input
-                      type="email"
-                      className="new-input w-100"
-                      placeholder="Your Email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="new-col-12">
-                    <input
-                      type="password"
-                      className="new-input w-100"
-                      placeholder="Password"
-                      name="password"
-                      value={formData.password}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                  <div className="new-col-12">
-                    <button className="new-btn w-100 py-3" type="submit">Sign Up</button>
-                  </div>
-                  {errorMessage && <div className="new-col-12"><p className="text-danger">{errorMessage}</p></div>}
-                  {successMessage && <div className="new-col-12"><p className="text-success">{successMessage}</p></div>}
-                  <div className="new-col-12">
-                    <p className="mt-3">Already have an account? <Link to="/login">Login</Link></p>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+          <h1 className="new-title">Create Your Account</h1>
+          <form onSubmit={handleSignup}>
+            <input
+              type="email"
+              className="new-input w-100 mb-3"
+              placeholder="Your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              className="new-input w-100 mb-3"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button className="new-btn w-100 py-3" type="submit">
+              Sign Up
+            </button>
+            {error && <p className="text-danger mt-3">{error}</p>}
+            {successMessage && <p className="text-success mt-3">{successMessage}</p>}
+          </form>
+          <p className="mt-3">
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
         </div>
       </div>
       <Footer />

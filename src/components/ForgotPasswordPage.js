@@ -1,7 +1,8 @@
+// src/components/ForgotPassword.js
 import React, { useState } from "react";
-import { supabase } from "../supabaseClient";
+import { auth } from "./firebaseConfig"; // Adjust path if necessary
+import { sendPasswordResetEmail } from "firebase/auth";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/ForgotPassword.css"; 
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar"; 
 import Footer from "./FooterPage";
@@ -20,12 +21,11 @@ const ForgotPasswordPage = () => {
     setErrorMessage(null);
     setSuccessMessage(null);
 
-    const { error } = await supabase.auth.resetPasswordForEmail(email);
-
-    if (error) {
-      setErrorMessage(error.message);
-    } else {
+    try {
+      await sendPasswordResetEmail(auth, email);
       setSuccessMessage("Password reset link sent! Please check your email.");
+    } catch (error) {
+      setErrorMessage(error.message);
     }
   };
 
