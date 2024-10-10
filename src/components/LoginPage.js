@@ -1,43 +1,25 @@
-// src/components/Login.js
 import React, { useState } from "react";
-import { auth } from "./firebaseConfig"; // Adjust path if necessary
+import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link, useNavigate } from "react-router-dom";
-import Navbar from "./Navbar"; 
+import { auth } from "./firebase/firebase"; // Import Firebase
+import { Link } from "react-router-dom"; // Add this line
+import Navbar from "./Navbar";
 import Footer from "./FooterPage";
-import { Modal } from "react-bootstrap"; // Importing Bootstrap Modal
+import "./css/Login.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "email") setEmail(value);
-    else if (name === "password") setPassword(value);
-  };
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setErrorMessage(null);
-    setLoading(true); // Set loading to true
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      setShowSuccessModal(true); // Show success modal
-      setTimeout(() => {
-        setShowSuccessModal(false);
-        navigate("/"); // Navigate to the home page after delay
-      }, 2000); // 2 seconds delay before navigating
+      navigate("/profile"); // Redirect to profile page on successful login
     } catch (error) {
-      setErrorMessage(error.message);
-    } finally {
-      setLoading(false); // Set loading to false after response
+      console.error("Error logging in:", error.message);
     }
   };
 
@@ -59,9 +41,8 @@ const LoginPage = () => {
                       type="email"
                       className="new-input w-100"
                       placeholder="Your Email"
-                      name="email"
                       value={email}
-                      onChange={handleInputChange}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
@@ -70,29 +51,17 @@ const LoginPage = () => {
                       type="password"
                       className="new-input w-100"
                       placeholder="Password"
-                      name="password"
                       value={password}
-                      onChange={handleInputChange}
+                      onChange={(e) => setPassword(e.target.value)}
                       required
                     />
                   </div>
                   <div className="new-col-12">
-                    <button className="new-btn w-100 py-3" type="submit" disabled={loading}>
-                      {loading ? (
-                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                      ) : (
-                        "Login"
-                      )}
-                    </button>
+                    <button className="new-btn w-100 py-3" type="submit">Login</button>
                   </div>
-                  {errorMessage && <div className="new-col-12"><p className="text-danger">{errorMessage}</p></div>}
                   <div className="new-col-12">
-                    <p className="mt-3">
-                      Forgot your password? <Link to="/forgot-password">Reset here</Link>
-                    </p>
-                    <p>
-                      Don't have an account? <Link to="/signup">Sign Up</Link>
-                    </p>
+                    <p className="mt-3">Forgot your password? <Link to="/forgot-password">Reset here</Link></p>
+                    <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
                   </div>
                 </div>
               </form>
@@ -100,20 +69,6 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Success Modal */}
-      <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Success!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>You have logged in successfully!</Modal.Body>
-        <Modal.Footer>
-          <button variant="secondary" onClick={() => setShowSuccessModal(false)}>
-            Close
-          </button>
-        </Modal.Footer>
-      </Modal>
-
       <Footer />
     </div>
   );

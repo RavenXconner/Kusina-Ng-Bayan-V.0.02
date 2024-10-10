@@ -1,0 +1,35 @@
+.new-section-title {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.new-text-primary {
+    color: #ffc107 !important;
+}
+
+.new-title {
+    margin-bottom: 2rem;
+}
+
+.ff-secondary {
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-email, .profile-date {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}

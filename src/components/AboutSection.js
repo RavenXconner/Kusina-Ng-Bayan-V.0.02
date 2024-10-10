@@ -34,6 +34,10 @@ const Home = () => {
               <Link to="/menu" className="nav-item nav-link">
                 Menu
               </Link>
+
+              <Link to="/contact" className="nav-item nav-link">
+                Contact
+              </Link>
               <div className="nav-item dropdown">
                 <Link
                   to="#"
@@ -43,7 +47,7 @@ const Home = () => {
                   More
                 </Link>
                 <div className="dropdown-menu m-0">
-                  <Link to="/maintenance" className="dropdown-item">
+                  <Link to="/profile" className="dropdown-item">
                     Profile
                   </Link>
                   <Link to="/team" className="dropdown-item">
@@ -54,9 +58,6 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="/contact" className="nav-item nav-link">
-                Contact
-              </Link>
             </div>
             <Link to="/signup" className="btn btn-primary py-2 px-4">
               SignUp

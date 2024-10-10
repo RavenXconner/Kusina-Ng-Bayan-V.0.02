@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
-const Navbar = () => {
+const Navbar = ({ loggedIn }) => { // Accept loggedIn prop
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
       <Link to="/" className="navbar-brand p-0">
@@ -30,6 +30,10 @@ const Navbar = () => {
           <Link to="/menu" className="nav-item nav-link">
             Menu
           </Link>
+
+          <Link to="/contact" className="nav-item nav-link">
+            Contact
+          </Link>
           <div className="nav-item dropdown">
             <Link
               to="#"
@@ -39,9 +43,15 @@ const Navbar = () => {
               Pages
             </Link>
             <div className="dropdown-menu m-0">
-              <Link to="/maintenance" className="dropdown-item">
-                Profile
-              </Link>
+              {loggedIn ? ( // Conditionally render Profile link based on loggedIn status
+                <Link to="/profile" className="dropdown-item">
+                  Profile
+                </Link>
+              ) : (
+                <Link to="/login" className="dropdown-item">
+                  Login
+                </Link>
+              )}
               <Link to="/team" className="dropdown-item">
                 Our Team
               </Link>
@@ -50,13 +60,12 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <Link to="/contact" className="nav-item nav-link">
-            Contact
-          </Link>
         </div>
-        <Link to="/signup" className="btn btn-primary py-2 px-4">
-          Sign up
-        </Link>
+        {!loggedIn && ( // Show Sign Up button only when logged out
+          <Link to="/signup" className="btn btn-primary py-2 px-4">
+            Sign up
+          </Link>
+        )}
       </div>
     </nav>
   );

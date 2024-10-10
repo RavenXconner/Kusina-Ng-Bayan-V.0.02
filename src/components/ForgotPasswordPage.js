@@ -1,31 +1,22 @@
-// src/components/ForgotPassword.js
 import React, { useState } from "react";
-import { auth } from "./firebaseConfig"; // Adjust path if necessary
 import { sendPasswordResetEmail } from "firebase/auth";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
-import Navbar from "./Navbar"; 
+import { auth } from "./firebase/firebase"; // Import Firebase
+import { Link } from "react-router-dom"; // Add this line
+import Navbar from "./Navbar";
 import Footer from "./FooterPage";
+import "./css/ForgotPassword.css";
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
-  const [successMessage, setSuccessMessage] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
 
-  const handleInputChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleForgotPassword = async (e) => {
+  const handlePasswordReset = async (e) => {
     e.preventDefault();
-    setErrorMessage(null);
-    setSuccessMessage(null);
 
     try {
       await sendPasswordResetEmail(auth, email);
-      setSuccessMessage("Password reset link sent! Please check your email.");
+      alert("Password reset link sent! Check your email.");
     } catch (error) {
-      setErrorMessage(error.message);
+      console.error("Error resetting password:", error.message);
     }
   };
 
@@ -40,7 +31,7 @@ const ForgotPasswordPage = () => {
           </div>
           <div className="new-row justify-content-center">
             <div className="new-col-md-6">
-              <form onSubmit={handleForgotPassword}>
+              <form onSubmit={handlePasswordReset}>
                 <div className="new-row">
                   <div className="new-col-12">
                     <input
@@ -48,19 +39,15 @@ const ForgotPasswordPage = () => {
                       className="new-input w-100"
                       placeholder="Your Email"
                       value={email}
-                      onChange={handleInputChange}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
                   <div className="new-col-12">
                     <button className="new-btn w-100 py-3" type="submit">Send Reset Link</button>
                   </div>
-                  {errorMessage && <div className="new-col-12"><p className="text-danger">{errorMessage}</p></div>}
-                  {successMessage && <div className="new-col-12"><p className="text-success">{successMessage}</p></div>}
                   <div className="new-col-12">
-                    <p className="mt-3">
-                      Remember your password? <Link to="/login">Login</Link>
-                    </p>
+                    <p className="mt-3">Remember your password? <Link to="/login">Login</Link></p>
                   </div>
                 </div>
               </form>

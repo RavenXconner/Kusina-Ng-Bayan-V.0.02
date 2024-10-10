@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
+import Footer from "./FooterPage";
 
 const Home = () => {
   return (
@@ -33,6 +34,10 @@ const Home = () => {
               <Link to="/menu" className="nav-item nav-link">
                 Menu
               </Link>
+              
+              <Link to="/contact" className="nav-item nav-link">
+                Contact
+              </Link>
               <div className="nav-item dropdown">
                 <Link
                   to="#"
@@ -42,7 +47,7 @@ const Home = () => {
                   More
                 </Link>
                 <div className="dropdown-menu m-0">
-                  <Link to="/maintenance" className="dropdown-item">
+                  <Link to="/profile" className="dropdown-item">
                     Profile
                   </Link>
                   <Link to="/team" className="dropdown-item">
@@ -53,9 +58,6 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="/contact" className="nav-item nav-link">
-                Contact
-              </Link>
             </div>
             <Link to="/signup" className="btn btn-primary py-2 px-4">
               Sign up
@@ -75,7 +77,7 @@ const Home = () => {
                 <p className="text-white animated slideInLeft mb-4 pb-2">
                   Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                   Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                  sed stet lorem sit clita duo justo magna dolore erat amet
+                  sed stet lorem sit clita duo justo magna dolore erat amet.
                 </p>
                 <Link to="/signup" className="btn btn-primary py-2 px-4">
                   Sign up
@@ -147,7 +149,7 @@ const Home = () => {
               <p className="mb-4">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+                sed stet lorem sit clita duo justo magna dolore erat amet.
               </p>
               <div className="row g-4 mb-4">
                 <div className="col-sm-6">
@@ -188,109 +190,7 @@ const Home = () => {
       </div>
       {/* About End */}
 
-      {/* Footer Start */}
-      <div className="container-fluid bg-dark text-light footer pt-5 mt-5">
-        <div className="container py-5">
-          <div className="row g-5">
-            {/* Company Section */}
-            <div className="col-lg-3 col-md-6">
-              <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">
-                Company
-              </h4>
-              <Link className="btn btn-link" to="/about">
-                About Us
-              </Link>
-              <Link className="btn btn-link" to="/contact">
-                Contact Us
-              </Link>
-              <Link className="btn btn-link" to="#">
-                Privacy Policy
-              </Link>
-              <Link className="btn btn-link" to="#">
-                Terms & Conditions
-              </Link>
-            </div>
-
-            {/* Contact Section */}
-            <div className="col-lg-3 col-md-6">
-              <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">
-                Contact
-              </h4>
-              <p className="mb-2">
-                <i className="fa fa-map-marker-alt me-3"></i>Cagayan de Oro,
-                Misamis Oriental
-              </p>
-              <p className="mb-2">
-                <i className="fa fa-phone-alt me-3"></i>+012 345 67890
-              </p>
-              <p className="mb-2">
-                <i className="fa fa-envelope me-3"></i>kusinangbayan@gmail.com
-              </p>
-              <div className="d-flex pt-2">
-                <Link className="btn btn-outline-light btn-social" to="#">
-                  <i className="fab fa-twitter"></i>
-                </Link>
-                <Link className="btn btn-outline-light btn-social" to="#">
-                  <i className="fab fa-facebook-f"></i>
-                </Link>
-                <Link className="btn btn-outline-light btn-social" to="#">
-                  <i className="fab fa-youtube"></i>
-                </Link>
-                <Link className="btn btn-outline-light btn-social" to="#">
-                  <i className="fab fa-linkedin-in"></i>
-                </Link>
-              </div>
-            </div>
-
-            {/* Opening Section */}
-            <div className="col-lg-3 col-md-6">
-              <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">
-                Opening
-              </h4>
-              <h5 className="text-light fw-normal">Monday - Saturday</h5>
-              <p>09AM - 09PM</p>
-              <h5 className="text-light fw-normal">Sunday</h5>
-              <p>10AM - 08PM</p>
-            </div>
-
-            {/* Newsletter Section */}
-            <div className="col-lg-3 col-md-6">
-              <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">
-                Newsletter
-              </h4>
-              <p>Stay updated on our latest news and events.</p>
-              <div
-                className="position-relative mx-auto"
-                style={{ maxWidth: "400px" }}
-              >
-                <input
-                  className="form-control border-primary w-100 py-3 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <Link
-                  className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                  to="#"
-                >
-                  SignUp
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Footer End */}
-      {/* Back to Top */}
-      <Link
-        to="#"
-        className="new-back-to-top btn-lg btn-primary btn-lg-square"
-        onClick={(e) => {
-          e.preventDefault(); // Prevent default anchor behavior
-          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
-        }}
-      >
-        <i className="bi bi-arrow-up"></i>
-      </Link>
+      <Footer />
     </div>
   );
 };
