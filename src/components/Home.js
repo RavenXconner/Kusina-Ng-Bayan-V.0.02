@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import { Link } from "react-router-dom"; // Add this line
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -34,13 +34,13 @@ const Home = () => {
                 Menu
               </Link>
               <div className="nav-item dropdown">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
                   More
-                </a>
+                </Link>
                 <div className="dropdown-menu m-0">
                   <Link to="/maintenance" className="dropdown-item">
                     Profile
@@ -49,7 +49,7 @@ const Home = () => {
                     Our Team
                   </Link>
                   <Link to="/maintenance" className="dropdown-item">
-                    in progress
+                    In Progress
                   </Link>
                 </div>
               </div>
@@ -59,8 +59,7 @@ const Home = () => {
             </div>
             <Link to="/signup" className="btn btn-primary py-2 px-4">
               Sign up
-            </Link>{" "}
-            {/* Use Link component */}
+            </Link>
           </div>
         </nav>
 
@@ -80,11 +79,10 @@ const Home = () => {
                 </p>
                 <Link to="/signup" className="btn btn-primary py-2 px-4">
                   Sign up
-                </Link>{" "}
-                {/* Use Link component */}
+                </Link>
               </div>
               <div className="col-lg-6 text-center text-lg-end overflow-hidden">
-                <img className="img-fluid" src="img//hero.png" alt="Hero" />
+                <img className="img-fluid" src="img/hero.png" alt="Hero" />
               </div>
             </div>
           </div>
@@ -205,12 +203,12 @@ const Home = () => {
               <Link className="btn btn-link" to="/contact">
                 Contact Us
               </Link>
-              <a className="btn btn-link" href="">
+              <Link className="btn btn-link" to="#">
                 Privacy Policy
-              </a>
-              <a className="btn btn-link" href="">
-                Terms & Condition
-              </a>
+              </Link>
+              <Link className="btn btn-link" to="#">
+                Terms & Conditions
+              </Link>
             </div>
 
             {/* Contact Section */}
@@ -219,7 +217,7 @@ const Home = () => {
                 Contact
               </h4>
               <p className="mb-2">
-                <i className="fa fa-map-marker-alt me-3"></i>Cagayan de Oro
+                <i className="fa fa-map-marker-alt me-3"></i>Cagayan de Oro,
                 Misamis Oriental
               </p>
               <p className="mb-2">
@@ -229,24 +227,18 @@ const Home = () => {
                 <i className="fa fa-envelope me-3"></i>kusinangbayan@gmail.com
               </p>
               <div className="d-flex pt-2">
-                <a className="btn btn-outline-light btn-social" href="">
+                <Link className="btn btn-outline-light btn-social" to="#">
                   <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  className="btn btn-outline-light btn-social"
-                  href="https://www.facebook.com/profile.php?id=61566546734898"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                </Link>
+                <Link className="btn btn-outline-light btn-social" to="#">
                   <i className="fab fa-facebook-f"></i>
-                </a>
-
-                <a className="btn btn-outline-light btn-social" href="">
+                </Link>
+                <Link className="btn btn-outline-light btn-social" to="#">
                   <i className="fab fa-youtube"></i>
-                </a>
-                <a className="btn btn-outline-light btn-social" href="">
+                </Link>
+                <Link className="btn btn-outline-light btn-social" to="#">
                   <i className="fab fa-linkedin-in"></i>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -266,7 +258,7 @@ const Home = () => {
               <h4 className="section-title ff-secondary text-start text-primary fw-normal mb-4">
                 Newsletter
               </h4>
-              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+              <p>Stay updated on our latest news and events.</p>
               <div
                 className="position-relative mx-auto"
                 style={{ maxWidth: "400px" }}
@@ -276,53 +268,29 @@ const Home = () => {
                   type="text"
                   placeholder="Your email"
                 />
-                <button
-                  type="button"
+                <Link
                   className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                  to="#"
                 >
                   SignUp
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright Section */}
-        <div className="container">
-          <div className="copyright">
-            <div className="row">
-              <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy;{" "}
-                <a className="border-bottom" href="/home">
-                  Kusing ng Bayan
-                </a>
-                , All Right Reserved.
-                <br />
-                Designed By{" "}
-                <a className="border-bottom" href="/team">
-                  LunchRoom Bandits BSIT-3R1
-                </a>
-                <br />
-                <br />
-              </div>
-              <div className="col-md-6 text-center text-md-end">
-                <div className="footer-menu">
-                  <a href="">Home</a>
-                  <a href="">Cookies</a>
-                  <a href="">Help</a>
-                  <a href="">FQAs</a>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* Footer End */}
-
       {/* Back to Top */}
-      <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
+      <Link
+        to="#"
+        className="new-back-to-top btn-lg btn-primary btn-lg-square"
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
+        }}
+      >
         <i className="bi bi-arrow-up"></i>
-      </a>
+      </Link>
     </div>
   );
 };

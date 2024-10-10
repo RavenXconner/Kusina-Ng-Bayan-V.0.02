@@ -44,13 +44,15 @@ const TeamPage = () => {
                 Menu
               </Link>
               <div className="nav-item dropdown">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="nav-link dropdown-toggle active"
                   data-bs-toggle="dropdown"
+                  onClick={(e) => e.preventDefault()}
                 >
                   Pages
-                </a>
+                </Link>
+
                 <div className="dropdown-menu m-0">
                   <Link to="/booking" className="dropdown-item">
                     in progress
@@ -67,9 +69,9 @@ const TeamPage = () => {
                 Contact
               </Link>
             </div>
-            <a href="" className="btn btn-primary py-2 px-4">
+            <Link to="/signup" className="btn btn-primary py-2 px-4">
               Sign up
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
@@ -124,15 +126,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">ARIEL JAY LYSTER VILLARTA</h5>
                 <small>PROJECT MANAGER</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -152,15 +154,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">JAVY MALISUD RODILLON</h5>
                 <small>FULL-STACK DEV</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -180,15 +182,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">JAMAICA PATAC</h5>
                 <small>FRONTEND DEV</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -208,15 +210,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">JEASON NEIL PAIGNA</h5>
                 <small>FRONTEND DEV</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -236,15 +238,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">SHUN CYREL CASERES</h5>
                 <small>FRONTEND DEV</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -264,15 +266,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">CHRISTINE SEVILLA</h5>
                 <small>UI/UX</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -292,15 +294,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">FAITH GRACE GUTIERREZ</h5>
                 <small>UI/UX</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -320,15 +322,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">JAYRILLE TUBERA</h5>
                 <small>UI/UX</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -348,15 +350,15 @@ const TeamPage = () => {
                 <h5 className="mb-0">ABBA JOY TAUTO-AN</h5>
                 <small>SCRUM MASTER</small>
                 <div className="d-flex justify-content-center mt-3">
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-twitter"></i>
-                  </a>
-                  <a className="btn btn-square btn-primary mx-1" href="#">
+                  </Link>
+                  <Link className="btn btn-square btn-primary mx-1" to="#">
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -368,6 +370,18 @@ const TeamPage = () => {
 
       {/* Footer Component */}
       <Footer />
+
+      {/* Back to Top */}
+      <Link
+        to="#"
+        className="new-back-to-top btn-lg btn-primary btn-lg-square"
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
+        }}
+      >
+        <i className="bi bi-arrow-up"></i>
+      </Link>
     </div>
   );
 };

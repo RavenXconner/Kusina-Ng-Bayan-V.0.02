@@ -52,9 +52,16 @@ const ForgotPasswordPage = () => {
       </div>
 
       {/* Back to Top */}
-      <a href="#" className="new-back-to-top btn-lg btn-primary btn-lg-square">
+      <Link
+        to="#"
+        className="new-back-to-top btn-lg btn-primary btn-lg-square"
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
+        }}
+      >
         <i className="bi bi-arrow-up"></i>
-      </a>
+      </Link>
 
       {/* Footer Component */}
       <Footer />

@@ -20,12 +20,12 @@ const Footer = () => {
               Contact Us
             </Link>
 
-            <a className="btn btn-link" href="#">
+            <Link className="btn btn-link" to="#">
               Privacy Policy
-            </a>
-            <a className="btn btn-link" href="#">
+            </Link>
+            <Link className="btn btn-link" to="#">
               Terms & Condition
-            </a>
+            </Link>
           </div>
 
           {/* Contact Section */}
@@ -44,9 +44,9 @@ const Footer = () => {
               <i className="fa fa-envelope me-3"></i>kusinangbayan@gmail.com
             </p>
             <div className="d-flex pt-2">
-              <a className="btn btn-outline-light btn-social" href="#">
+              <Link className="btn btn-outline-light btn-social" to="#">
                 <i className="fab fa-twitter"></i>
-              </a>
+              </Link>
               <a
                 className="btn btn-outline-light btn-social"
                 href="https://www.facebook.com/profile.php?id=61566546734898"
@@ -55,13 +55,12 @@ const Footer = () => {
               >
                 <i className="fab fa-facebook-f"></i>
               </a>
-
-              <a className="btn btn-outline-light btn-social" href="#">
+              <Link className="btn btn-outline-light btn-social" to="#">
                 <i className="fab fa-youtube"></i>
-              </a>
-              <a className="btn btn-outline-light btn-social" href="#">
+              </Link>
+              <Link className="btn btn-outline-light btn-social" to="#">
                 <i className="fab fa-linkedin-in"></i>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -108,24 +107,24 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               &copy;{" "}
-              <a className="border-bottom" href="#">
+              <Link className="border-bottom" to="#">
                 Kusina ng Bayan
-              </a>
+              </Link>
               , All Right Reserved.
               <br />
               Designed By{" "}
-              <a className="border-bottom" href="/team">
+              <Link className="border-bottom" to="/team">
                 LunchRoom Bandits BSIT-3R1
-              </a>
+              </Link>
               <br />
               <br />
             </div>
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
                 <Link to="./">Home</Link>
-                <a href="#">Cookies</a>
-                <a href="#">Help</a>
-                <a href="#">FAQs</a>
+                <Link to="#">Cookies</Link>
+                <Link to="#">Help</Link>
+                <Link to="#">FAQs</Link>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import { Link } from "react-router-dom"; // Add this line
+import { Link } from "react-router-dom"; // Add Link from react-router-dom
 import Footer from "./footer"; // Adjust the path based on your folder structure
 
 const Home = () => {
@@ -50,7 +50,7 @@ const Home = () => {
                     Our Team
                   </Link>
                   <Link to="/maintenance" className="dropdown-item">
-                    in progress
+                    In Progress
                   </Link>
                 </div>
               </div>
@@ -175,18 +175,25 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <a className="btn btn-primary py-3 px-5 mt-2" href="#">
+              <Link to="#" className="btn btn-primary py-3 px-5 mt-2">
                 Read More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       {/* About End */}
       {/* Back to Top */}
-      <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
+      <Link
+        to="#"
+        className="new-back-to-top btn-lg btn-primary btn-lg-square"
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
+        }}
+      >
         <i className="bi bi-arrow-up"></i>
-      </a>
+      </Link>
       {/* Footer Component */}
       <Footer /> {/* Add Footer component here */}
     </div>

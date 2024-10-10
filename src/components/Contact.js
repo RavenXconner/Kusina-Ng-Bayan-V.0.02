@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/Contact.css"; // Custom styles
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Navbar from "./Navbar"; // Import the Navbar component
-import Footer from "./footer";
+import Footer from "./footer"; // Import the Footer component
 
 const ContactPage = () => {
   return (
@@ -25,7 +25,8 @@ const ContactPage = () => {
               <div className="wow fadeInUp" data-wow-delay="0.2s">
                 <h5 className="new-info-title">Contact Info</h5>
                 <p>
-                  <i className="fa fa-map-marker-alt me-3"></i>Cagayan de Oro, Misamis Oriental
+                  <i className="fa fa-map-marker-alt me-3"></i>Cagayan de Oro,
+                  Misamis Oriental
                 </p>
                 <p>
                   <i className="fa fa-phone-alt me-3"></i>+012 345 6789
@@ -85,9 +86,16 @@ const ContactPage = () => {
       </div>
 
       {/* Back to Top */}
-      <a href="#" className="new-back-to-top btn-lg btn-primary btn-lg-square">
+      <Link
+        to="#"
+        className="new-back-to-top btn-lg btn-primary btn-lg-square"
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top smoothly
+        }}
+      >
         <i className="bi bi-arrow-up"></i>
-      </a>
+      </Link>
 
       {/* Footer Component */}
       <Footer />
